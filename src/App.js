@@ -3,8 +3,7 @@ import './picker.css'
 import React from 'react';
 import Theme from './Theme';
 import axios from 'axios';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+
 const App = () => {
   const [themes, setThemes] = React.useState([]); // You'd fetch this data
 
@@ -17,8 +16,8 @@ const App = () => {
   }, []);
 
   return (
-    <div className="container">
-      <div className="sidebar" id="sidebar">
+    <div className="datacontainer">
+      <div className="datasidebar" id="sidebar">
         {themes.map((theme) => (
           <Theme key={theme.id} theme={theme} level={0} />
         ))}

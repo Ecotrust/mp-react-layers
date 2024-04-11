@@ -55,7 +55,7 @@ const Theme = ({ theme, level, borderColor }) => {
   const themeBorderColor = borderColor || getGreenShade(level);
   return (
     <div>
-    <div className="column-item picker" onClick={handleClick} style={{
+    <div className={level < 1 ? "column-item picker" : "column-item"} onClick={handleClick} style={{
           backgroundColor: expanded ? getGreenShade(level) : "",
           border: borderColor ? `3px solid ${themeBorderColor}` : "none"
         }}>
@@ -65,7 +65,7 @@ const Theme = ({ theme, level, borderColor }) => {
     {expanded && (
       <div>
         {childrenThemes === "no-children" ? (
-          <div className="no-layers-msg" style={{ padding: "10px", border: `3px solid ${getGreenShade(level)}`, marginBottom: "1px" }}>
+          <div className="no-layers-msg" style={{ position: "relative", padding: "10px", border: `3px solid ${getGreenShade(level)}`, marginBottom: "1px" }}>
             No layers
           </div>
         ) : (

@@ -1,4 +1,4 @@
-/* Basic reset */
+ /* Basic reset
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,17 +7,16 @@
 
 body {
   font-family: Arial, sans-serif;
-}
+} */
 
-.container {
+/* .datacontainer {
   display: flex;
   flex-direction: column;
   height: 100vh;
-}
+} */
 
-.sidebar {
+.picker {
   position: relative;
-  top: 33px;
   left: 0;
   background-color: #ffffff;
   z-index: 1000;
@@ -25,10 +24,10 @@ body {
   padding: 0px;
   height: calc(
     100% - 47px
-  ); /* this is the height for just the myTabContent, not including the actual tabs */
-  overflow-y: auto; /* Scrollable sidebar */
+  );
+  overflow-y: auto; 
   border: 1px solid #ddd;
-}
+} 
 
 .fa-info-circle {
   float: left;
@@ -78,7 +77,9 @@ body {
 .link-bar.show {
   display: block;
 }
-
+ul {
+  padding-left: 0;
+}
 .children-item {
   background-color: transparent;
   padding: 8px;
